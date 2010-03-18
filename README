@@ -1,0 +1,23 @@
+This work is licensed under the Creative Commons Attribution 3.0 United States License. 
+To view a copy of this license, visit 
+http://creativecommons.org/licenses/by/3.0/us/ or send a letter to 
+Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+Copyright 2010, Rob Blakemore
+http://wiki.github.com/rdblakemore/JavaScript-Interface/
+
+
+INFO:
+This simple JavaScript class provides a means of programming against interfaces in JavaScript.
+
+FILES:
+interface.js
+JavaScript file required for implementing this method of programming in JavaScript.
+
+interface-min.js
+Compressed version of interface.js. Ideal for production use.
+
+interface-sample.js
+Sample JavaScript showing how to use the Interface class.
+
+interface-sample.html
+Sample HTML page for running in a browser; makes use of interface-min.js and interface-sample.js

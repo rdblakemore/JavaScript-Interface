@@ -1,0 +1,9 @@
+/**
+ * This work is licensed under the Creative Commons Attribution 3.0 United States License. 
+ * To view a copy of this license, visit 
+ * http://creativecommons.org/licenses/by/3.0/us/ or send a letter to 
+ * Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+ * Copyright 2010, Rob Blakemore
+ * http://wiki.github.com/rdblakemore/JavaScript-Interface/
+ */
+var Interface=function(i){i=i||null;var c=function(k){return typeof k==="undefined"},d=function(k){return typeof k!=="function"},g=function(l,k){if(d(l)){throw new Error('"signature" parameter should be of type "function"')}if(d(k)){throw new Error('"implementation" parameter should be of type "function"')}return l.length!==k.length},f,e,h;switch(true){case i===null:throw new Error("No arguments supplied to an instance of Interface constructor.");case c(i.type):throw new Error("Interface.type not defined.");case c(i.implementation):throw new Error("The interface ".concat(i.type).concat(" has not been implemented."))}f=i.type,e=i.implementation,h={};for(var j in i){var b=i[j];if(!d(b)){h[j]=b}}for(var b in h){if(c(e[b])){throw new Error(f.concat(".").concat(b).concat(" has not been implemented."))}for(var j in e){var a=e[j];switch(true){case c(h[j]):throw new Error(j.concat(" is not a defined member of ").concat(f).concat("."));case d(a):throw new Error(f.concat(".").concat(j).concat(" has not been implemented as a function."));case g(h[j],a):throw new Error("An implementation of ".concat(f).concat(".").concat(j).concat(" does not have the correct number of arguments."));default:h[j]=a;break}}}return h};
